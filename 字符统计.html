@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com">
+<meta name="copyright" content="智能社 - zhinengshe.com">
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+</style>
+<script>
+	var str = 'aaabbbbcccccc';
+	var arr = str.split('');
+	var json = {};//{a:4,b:5,c:9}
+	for(var i = 0;i<arr.length;i++){
+		//第一次
+		if(json[arr[i]] == undefined){
+			json[arr[i]] = 1;
+		}else{
+			json[arr[i]]++; 		
+		}
+	}
+	console.log(json);
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

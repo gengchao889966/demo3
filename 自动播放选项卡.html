@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="">
+<meta name="copyright" content="">
+<title></title>
+<style>
+	#box .on{ background:red;}
+	#box div{ background:#ccc; width:300px;height:300px; display:none;}
+</style>
+<script>
+	window.onload = function(){
+		var oBox = document.getElementById('box');
+		var aBtn = oBox.getElementsByTagName('input');
+		var aDiv = oBox.getElementsByTagName('div');
+		
+		for(var i = 0;i<aBtn.length;i++){
+			aBtn[i].index = i;
+			aBtn[i].onclick = function(){
+				for(var i = 0;i<aBtn.length;i++){
+					aBtn[i].className = '';
+					aDiv[i].style.display = 'none';
+				}	
+				this.className = 'on';
+				aDiv[this.index].style.display = 'block';
+			};
+		}
+		
+	};
+</script>
+</head>
+<body>
+	<div id="box">
+    	<input type="button" value="小说" class="on">
+    	<input type="button" value="电影">
+    	<input type="button" value="音乐">
+       	<div style="display:block;">芈月传</div> 
+       	<div>疯狂动物城</div> 
+       	<div>那些花儿</div> 
+    </div>
+</body>
+</html>
+
+
+
+
+
